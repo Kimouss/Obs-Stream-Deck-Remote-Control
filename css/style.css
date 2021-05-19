@@ -1,0 +1,48 @@
+:root {
+  --size: 130px;
+}
+
+html {
+  background-color: #404040;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #404040;
+}
+
+.none {
+  display: none!important;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--size));
+  grid-template-rows: repeat(auto-fit, var(--size));
+  gap: 10px;
+}
+
+button {
+  background-color: #34495e;
+  border: none;
+  color: #fff;
+  border-bottom: solid 4px #2c3e50;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+button.active {
+  background-color: #2ecc71;
+  border-bottom: solid 4px #27ae60;
+}
+
+.nav-link {
+  color: #fff!important;
+}
+
+.nav-link.active {
+  background-color: #673ab7!important;
+}
