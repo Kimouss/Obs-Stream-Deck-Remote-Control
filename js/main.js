@@ -26,7 +26,7 @@ async function main() {
     for (const sound of sounds) {
         const button = new SoundButton(obs, sound.name);
         button.appendTo(soundsRow);
-        if (scene.name === data['current-scene']) {
+        if (sound.name === data['current-scene']) {
             button.active(true);
         }
     }

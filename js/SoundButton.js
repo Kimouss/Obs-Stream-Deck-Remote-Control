@@ -27,7 +27,11 @@ export class SoundButton extends Button {
         });
     }
 
-    onClick() {
-        this.obs.send('RestartMedia', { 'sourceName': this.soundName });
+    onClick(toto) {
+        if (this.button.getAttribute('class') === 'active') {
+            this.obs.send('StopMedia', { 'sourceName': this.soundName });
+        } else {
+            this.obs.send('RestartMedia', { 'sourceName': this.soundName });
+        }
     }
 }
